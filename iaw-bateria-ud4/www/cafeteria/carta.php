@@ -12,7 +12,12 @@ require __DIR__ . '/inc/cabecera.php';
 ?>
 <h2>La carta</h2>
 <ul id="carta">
-<?php // ✍️ 2.1 · Un <li> por plato: «nombre — precio» (el precio, con tu euros()). Pista: foreach. ?>
+<?php $plato = [['nombre' => 'Ensaladilla', 'precio' => 5], ['nombre' => 'Presa Ibérica', 'precio' => 12], ['nombre' => 'Paella', 'precio' => 9], ['nombre' => 'Queso curado', 'precio' => 4], ['nombre' => 'Pulpo a la Gallega', 'precio' => 6]]; ?>
+<ul>
+<?php foreach ($plato as $p): ?>
+  <li><?= $p['nombre'] ?> — <?= $p['precio'] ?></li>
+<?php endforeach; ?>
+</ul> // ✍️ 2.1 · Un <li> por plato: «nombre — precio» (el precio, con tu euros()). Pista: foreach. ?>
 </ul>
 
 <?php // ✍️ 2.3 · Suma los precios de todos los platos. Pista: array_column + array_sum. ?>
