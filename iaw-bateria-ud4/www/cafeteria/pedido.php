@@ -25,7 +25,7 @@ $errores = [];
 $hecho = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre     = trim($_POST['nombre'] ?? '');
-    $plato      = $_POST['plato'] ?? '';
+    $platos      = $_POST['plato'] ?? '';
     $comentario = trim($_POST['comentario'] ?? '');
 
     // ✍️ 3.2 · La cantidad tiene que ser un número ENTERO del 1 al 5. Si no lo es, añade a $errores:
@@ -52,6 +52,11 @@ if ($elegido === null) {
     $errores[] = 'Ese plato no está en la carta.';
 }
     // ✍️ 3.4 · Si hay errores, contesta con el código 422 (datos no válidos). Si no, $hecho = true.
+if ($errores) {
+    http_response_code(422);
+} else {
+    $hecho = true;
+}
     $hecho = true;
 }
 require __DIR__ . '/inc/cabecera.php';
