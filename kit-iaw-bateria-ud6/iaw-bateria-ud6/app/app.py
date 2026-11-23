@@ -55,8 +55,6 @@ def buscar():
         return jsonify(cur.fetchall())
 
 
-@app.route("/api/incidencias", methods=["GET", "POST"])
-def incidencias():
     # ✍️ 6 · Integrador. Usa la tabla incidencias que creaste en el 1.3.
     #
     # GET  → la lista de incidencias, la más nueva primero:
@@ -68,4 +66,35 @@ def incidencias():
     #        - si todo está bien: INSERT con %s, c.commit() y {"id": cur.lastrowid}, 201
     #
     # Todo con consultas preparadas: la descripción la escribe cualquiera.
-    return jsonify({"error": "Sin hacer todavía"}), 501
+@app.route("/api/incidencias", methods=["GET", "POST"])
+def incidencias():
+    if request.method == "GET":
+        with conectar() as c, c.cursor() as cur:
+            cur.execute(
+                "SELECT id, equipo_id, descripcion FROM incidencias ORDER BY id DESC"
+            )
+            return jsonify(cur.fetchall())
+
+    datos = request.get_json(silent=True) or {}
+    equipo_id = datos.get("equipo_id")
+    descripcion = datos.get("descripcion")
+
+    if not isinstance(descripcion, str) or not descripcion.strip():
+        return jsonify({"error": "La descripción es obligatoria"}), 422
+
+    if equipo_id is None or isinstance(equipo_id, bool):
+        return jsonify({"error": "El equipo_id es obligatorio"}), 422
+
+    with conectar() as c, c.cursor() as cur:
+        cur.execute("SELECT id FROM equipos WHERE id = %s", (equipo_id,))
+        if cur.fetchone() is None:
+            return jsonify({"error": "El equipo indicado no existe"}), 422
+
+        cur.execute(
+            "INSERT INTO incidencias (equipo_id, descripcion) VALUES (%s, %s)",
+            (equipo_id, descripcion),
+        )
+        c.commit()
+        nuevo_id = cur.lastrowid
+
+    return jsonify({"id": nuevo_id}), 201
