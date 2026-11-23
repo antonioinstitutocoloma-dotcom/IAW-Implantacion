@@ -1,0 +1,1941 @@
+[2026-11-20 16:00:43 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:00:43 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:00:43 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:00:43 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:00:43 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:00:43 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:01:06 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:01:06 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:01:06 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:01:06 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:01:07 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:01:07 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:01:07 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:01:07 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:01:07 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:01:07 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:01:07 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:01:08,778] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:06:25 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:06:25 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:06:25 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:06:25 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:06:25 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:06:25 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:06:25 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:06:25 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:06:25 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:06:26 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:06:26 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:06:27,737] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:13:17 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:13:17 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:13:17 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:13:17 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:13:17 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:13:17 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:13:17 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:13:17 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:13:17 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:13:17 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:13:17 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:13:20,122] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:15:24 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:15:24 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:15:24 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:15:24 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:15:24 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:15:25 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:15:25 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:15:25 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:15:25 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:15:25 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:15:25 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:15:27,370] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:16:26 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:16:26 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:16:26 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:16:26 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:16:26 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:16:26 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:16:26 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:16:26 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:16:26 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:16:26 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:16:26 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:16:28,780] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:17:26 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:17:26 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:17:26 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:17:26 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:17:27 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:17:27 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:17:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:17:27 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:17:27 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:17:27 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:17:27 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:17:29,690] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:17:34 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:17:34 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:17:34 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:17:34 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:17:34 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:17:35 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:17:35 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:17:35 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:17:35 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:17:35 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:17:35 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:17:35,631] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:17:36,010] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:18:44 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:18:44 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:18:44 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:18:44 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:18:44 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:18:45 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:18:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:18:45 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:18:45 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:18:45 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:18:45 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:18:45,647] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:18:46,168] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:34:26 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:34:26 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:34:26 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:34:26 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:34:26 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:34:26 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:34:26 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:34:26 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:34:26 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:34:26 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:34:26 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:34:27,011] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:34:27,523] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:35:59 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:35:59 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:35:59 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:35:59 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:35:59 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:35:59 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:35:59 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:35:59 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:35:59 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:35:59 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:35:59 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:35:59,976] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:36:00,484] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:38:44 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:38:44 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:38:44 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:38:44 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:38:44 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:38:45 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:38:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:38:45 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:38:45 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:38:45 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:38:45 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:38:45,683] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:38:46,194] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:40:18 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:40:18 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:40:18 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:40:18 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:40:19 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:40:19 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:40:19 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:40:19 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:40:19 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:40:19 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:40:19 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:40:19,756] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:40:20,263] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:42:19 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:42:19 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:42:19 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:42:19 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:42:19 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:42:19 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:42:19 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:42:19 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:42:19 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:42:19 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:42:19 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:42:20,100] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:42:20,612] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:51:55 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:51:55 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:51:55 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:51:55 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:51:55 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:51:56 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:51:56 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:51:56 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:51:56 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:51:56 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:51:56 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:51:56,369] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:51:56,882] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:59:34 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 16:59:34 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 16:59:34 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 16:59:34 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 16:59:34 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 16:59:34 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 16:59:34 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 16:59:34 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 16:59:34 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 16:59:34 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 16:59:34 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 16:59:34,967] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 16:59:35,565] ERROR in app: Exception on /api/equipos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 28, in equipos
+    with conectar() as c, c.cursor() as cur:
+         ^^^^^^^^^^
+  File "/srv/app/app.py", line 14, in conectar
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'172.24.0.4' (using password: NO)")
+[2026-11-20 17:03:01 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:03:01 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:03:01 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:03:01 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:03:01 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:03:01 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:03:01 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:03:01 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:03:01 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:03:01 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:03:01 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:03:04 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:03:04 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:03:04 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:03:04 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:03:04 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:03:04 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:03:04 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:03:04 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:03:04 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:03:04 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:03:04 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:03:09 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:03:09 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:03:09 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:03:09 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:03:09 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:03:09 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:03:09 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:03:09 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:03:09 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:03:09 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:03:10 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:04:31 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:04:31 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:04:31 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:04:31 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:04:31 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:04:31 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:04:31 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:04:31 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:04:31 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:04:31 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:04:31 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:19:48 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:19:48 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:19:48 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:19:48 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:19:48 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:19:48 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:19:48 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:19:48 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:19:48 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:19:49 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:19:49 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:33:08 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:33:08 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:33:08 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:33:08 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:33:08 +0000] [1] [INFO] Shutting down: Master
+[2026-11-20 17:33:09 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-20 17:33:09 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-20 17:33:09 +0000] [1] [INFO] Using worker: sync
+[2026-11-20 17:33:09 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-20 17:33:09 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-20 17:33:09 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-20 17:34:33 +0000] [1] [INFO] Handling signal: term
+[2026-11-20 17:34:33 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-20 17:34:33 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-20 17:34:33 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-20 17:34:33 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 15:17:17 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:17:17 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:17:17 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:17:17 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:17:17 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:17:17 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 15:17:59 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 15:17:59 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:17:59 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 15:17:59 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:17:59 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 15:18:00 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:18:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:18:00 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:18:00 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:18:00 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:18:00 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 15:33:56 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 15:33:56 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:33:56 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:33:56 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 15:33:57 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 15:33:57 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:33:57 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:33:57 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:33:57 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:33:57 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:33:57 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 15:33:58,291] ERROR in app: Exception on /api/buscar [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 54, in buscar
+    cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = (aula,) ORDER BY codigo")
+  File "/usr/local/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') ORDER BY codigo' at line 1")
+[2026-11-23 15:33:58,412] ERROR in app: Exception on /api/buscar [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/app/app.py", line 54, in buscar
+    cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = (aula,) ORDER BY codigo")
+  File "/usr/local/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') ORDER BY codigo' at line 1")
+[2026-11-23 15:40:02 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 15:40:02 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:40:02 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:40:02 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 15:40:02 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 15:40:03 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:40:03 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:40:03 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:40:03 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:40:03 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:40:03 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:40:03 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:40:03 +0000] [10] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:40:03 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:40:03 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:40:03 +0000] [1] [ERROR] Worker (pid:10) was sent SIGTERM!
+[2026-11-23 15:40:03 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:40:03 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:42:25 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:42:25 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:42:25 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:42:25 +0000] [8] [INFO] Booting worker with pid: 8
+[2026-11-23 15:42:25 +0000] [8] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:42:25 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2026-11-23 15:42:25 +0000] [1] [ERROR] Worker (pid:8) exited with code 3
+[2026-11-23 15:42:25 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:42:25 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:43:07 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:43:07 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:43:07 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:43:07 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:43:07 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:43:07 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:43:07 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:43:07 +0000] [10] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:43:07 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:43:07 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:43:07 +0000] [1] [ERROR] Worker (pid:10) was sent SIGTERM!
+[2026-11-23 15:43:07 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:43:07 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:43:54 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:43:54 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:43:54 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:43:54 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:43:54 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:43:54 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:43:54 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:43:54 +0000] [10] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:43:54 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:43:54 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:43:54 +0000] [1] [ERROR] Worker (pid:10) was sent SIGTERM!
+[2026-11-23 15:43:54 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:43:54 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:44:29 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:44:29 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:44:29 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:44:29 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:44:29 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:44:29 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:44:29 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 15:44:29 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 15:44:29 +0000] [10] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:44:29 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 15:44:29 +0000] [11] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:44:29 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 15:44:29 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:44:29 +0000] [1] [ERROR] Worker (pid:10) was sent SIGTERM!
+[2026-11-23 15:44:29 +0000] [1] [ERROR] Worker (pid:11) was sent SIGTERM!
+[2026-11-23 15:44:29 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:44:29 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:45:16 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:45:16 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:45:16 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:45:16 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:45:16 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:45:16 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:45:16 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:45:16 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:45:16 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 15:47:27 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 15:47:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 15:47:27 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 15:47:27 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 15:47:27 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 15:47:27 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 15:47:27 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 15:47:27 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 15:47:27 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 16:01:43 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:01:43 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:01:43 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:01:43 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:01:43 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 16:01:43 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:01:43 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 16:01:43 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 16:01:43 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 16:43:17 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:43:17 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:43:17 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:43:17 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:43:17 +0000] [9] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/srv/app/app.py", line 54
+    	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2026-11-23 16:43:17 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:43:17 +0000] [1] [ERROR] Worker (pid:9) exited with code 3
+[2026-11-23 16:43:17 +0000] [1] [ERROR] Shutting down: Master
+[2026-11-23 16:43:17 +0000] [1] [ERROR] Reason: Worker failed to boot.
+[2026-11-23 16:47:04 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:47:04 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:47:04 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:47:04 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:47:04 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 16:47:04 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 16:47:09 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 16:47:09 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:47:09 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 16:47:09 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 16:47:09 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 16:47:09 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:47:09 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:47:09 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:47:09 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:47:09 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 16:47:09 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 16:47:45 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 16:47:45 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:47:45 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 16:47:45 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 16:47:45 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 16:47:45 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:47:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:47:45 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:47:45 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:47:45 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 16:47:45 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 16:48:16 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 16:48:16 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 16:48:16 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:48:16 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 16:48:16 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 16:48:16 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:48:16 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:48:16 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:48:16 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:48:16 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 16:48:16 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 16:54:15 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 16:54:15 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 16:54:15 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 16:54:15 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 16:54:15 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 16:54:15 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 16:54:15 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 16:54:15 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 16:54:15 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 16:54:15 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 16:54:15 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 17:06:02 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 17:06:02 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 17:06:02 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 17:06:02 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 17:06:02 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 17:06:02 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 17:06:02 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 17:06:02 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 17:06:02 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 17:06:02 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 17:06:03 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 17:09:12 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 17:09:12 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 17:09:12 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 17:09:12 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 17:09:12 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 17:13:41 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 17:13:41 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 17:13:41 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 17:13:41 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 17:13:41 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 17:13:41 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 17:17:52 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 17:17:52 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 17:17:52 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 17:17:52 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 17:17:52 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 17:17:52 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 17:17:52 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 17:17:52 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 17:17:52 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 17:17:52 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 17:17:53 +0000] [12] [INFO] Booting worker with pid: 12
+[2026-11-23 18:12:58 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:12:58 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:12:58 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:12:58 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2026-11-23 18:12:58 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:13:18 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:13:18 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:13:18 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:13:18 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:13:18 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:13:18 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:18:04 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:18:04 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:18:04 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:18:04 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:18:05 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:18:05 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:18:05 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:18:05 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:18:05 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:18:05 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:18:05 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:22:29 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:22:29 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:22:29 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:22:29 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:22:29 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:23:48 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:23:48 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:23:48 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:23:48 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:23:48 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:23:49 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:23:52 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:23:52 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:23:52 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:23:52 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:23:52 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:23:52 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:23:52 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:23:52 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:23:52 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:23:52 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:23:52 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:25:04 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:25:04 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:25:04 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:25:04 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:25:05 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:25:05 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:25:05 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:25:05 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:25:05 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:25:05 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:25:05 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:33:02 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:33:02 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:33:02 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:33:02 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:33:02 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:33:03 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:33:03 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:33:03 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:33:03 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:33:03 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:33:03 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:50:09 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:50:09 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:50:09 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:50:09 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:50:09 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:50:09 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:50:09 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:50:09 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:50:09 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:50:09 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:50:09 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:55:23 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:55:23 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:55:23 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:55:23 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:55:23 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:55:23 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:55:23 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:55:23 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:55:23 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:55:23 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:55:23 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 18:57:33 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 18:57:33 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 18:57:33 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 18:57:33 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 18:57:33 +0000] [1] [INFO] Shutting down: Master
+[2026-11-23 18:57:33 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-23 18:57:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-23 18:57:33 +0000] [1] [INFO] Using worker: sync
+[2026-11-23 18:57:33 +0000] [9] [INFO] Booting worker with pid: 9
+[2026-11-23 18:57:33 +0000] [10] [INFO] Booting worker with pid: 10
+[2026-11-23 18:57:33 +0000] [11] [INFO] Booting worker with pid: 11
+[2026-11-23 19:03:38 +0000] [1] [INFO] Handling signal: term
+[2026-11-23 19:03:38 +0000] [10] [INFO] Worker exiting (pid: 10)
+[2026-11-23 19:03:38 +0000] [9] [INFO] Worker exiting (pid: 9)
+[2026-11-23 19:03:38 +0000] [11] [INFO] Worker exiting (pid: 11)
+[2026-11-23 19:03:38 +0000] [1] [INFO] Shutting down: Master
