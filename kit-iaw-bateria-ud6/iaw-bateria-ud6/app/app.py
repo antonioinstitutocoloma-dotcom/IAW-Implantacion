@@ -12,7 +12,7 @@ app.json.ensure_ascii = False          # las tildes, tal cual en el JSON
 #        Nada escrito a mano: lo que haya en inventario.env.
 def conectar():
     return pymysql.connect(
-	user=os.environ["DB_USER"], password=os.environ["DB_PASS"],
+user=os.environ["DB_USER"], password=os.environ["DB_PASS"],
         host=os.environ["DB_HOST"], database=os.environ["DB_NAME"],
         charset="utf8mb4", cursorclass=pymysql.cursors.DictCursor,   # cada fila, un diccionario
     )
@@ -51,8 +51,8 @@ def buscar():
     # ⚠️ ASÍ VIENE: el texto del usuario se pega dentro del SQL (f-string) → inyección SQL.
     # ✍️ 3.2 Como en equipo(), justo encima: %s en el SQL y el dato aparte, en una tupla.
     with conectar() as c, c.cursor() as cur:
-	cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
-	return jsonify(cur.fetchall())
+        cur.execute("SELECT codigo, tipo, aula, estado FROM equipos WHERE aula = %s ORDER BY codigo", (aula,))
+        return jsonify(cur.fetchall())
 
 
 @app.route("/api/incidencias", methods=["GET", "POST"])
